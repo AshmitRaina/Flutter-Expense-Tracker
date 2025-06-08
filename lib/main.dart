@@ -1,4 +1,4 @@
-import 'package:expense_tracker_revision/pages/home_page.dart';
+import 'package:expense_tracker_revision/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 final kLightModeColorScheme = ColorScheme.fromSeed(
