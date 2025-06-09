@@ -1,6 +1,6 @@
 import 'package:expense_tracker_revision/charts/chart_layout.dart';
 import 'package:expense_tracker_revision/expense_list_hp.dart';
-import 'package:expense_tracker_revision/screens_ui/inside_overlay.dart';
+import 'package:expense_tracker_revision/screens/inside_overlay.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker_revision/modal/expenses_structure.dart';
 
