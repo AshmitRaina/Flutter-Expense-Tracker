@@ -8,8 +8,8 @@ class ExpenseListhp extends StatelessWidget {
   final void Function(ExpensesStructure expenseIndex) onRemoveItem;
   @override
   Widget build(context) {
-    return Expanded(
-      child: ListView.builder(
+    return  ListView.builder(
+      shrinkWrap: true,
         itemCount: storedExpStructure.length,
         itemBuilder:
             (context, index) => Dismissible(
@@ -22,7 +22,6 @@ class ExpenseListhp extends StatelessWidget {
               onDismissed: (direction) => onRemoveItem(storedExpStructure[index]),
               child: ExpenseListItem(storedExpStructure[index]),
             ),
-      ),
-    );
+      );
   }
 }
