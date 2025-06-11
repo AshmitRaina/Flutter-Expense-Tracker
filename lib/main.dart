@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 final kLightModeColorScheme = ColorScheme.fromSeed(
-  seedColor: Color.fromARGB(255, 160, 121, 108),
+  seedColor: const Color.fromARGB(255, 160, 121, 108),
 );
 final kDarkModeColorScheme = ColorScheme.fromSeed(seedColor: Colors.black);
 void main() {
@@ -19,10 +19,10 @@ void main() {
             darkTheme: ThemeData.dark().copyWith(
               colorScheme: kDarkModeColorScheme,
               brightness: Brightness.dark,
-              appBarTheme: AppBarTheme().copyWith(
+              appBarTheme: const AppBarTheme().copyWith(
                 backgroundColor: kDarkModeColorScheme.onSecondaryContainer,
               ),
-              textTheme: TextTheme().copyWith(
+              textTheme: const TextTheme().copyWith(
                 titleLarge: TextStyle(color: kDarkModeColorScheme.onPrimary),
 
                 labelLarge: TextStyle(
@@ -35,17 +35,17 @@ void main() {
                   foregroundColor: kDarkModeColorScheme.onPrimary,
                 ),
               ),
-              cardTheme: CardThemeData().copyWith(
+              cardTheme:const  CardThemeData().copyWith(
                 color: kDarkModeColorScheme.primary,
               ),
-              bottomSheetTheme: BottomSheetThemeData().copyWith(
+              bottomSheetTheme: const BottomSheetThemeData().copyWith(
                 backgroundColor: kDarkModeColorScheme.onSecondaryFixed,
               ),
             ),
 
             theme: ThemeData().copyWith(
               colorScheme: kLightModeColorScheme,
-              appBarTheme: AppBarTheme().copyWith(
+              appBarTheme: const AppBarTheme().copyWith(
                 backgroundColor: kLightModeColorScheme.secondaryContainer,
               ),
 
@@ -54,7 +54,7 @@ void main() {
                   foregroundColor: kLightModeColorScheme.onPrimaryContainer,
                 ),
               ),
-              textTheme: TextTheme().copyWith(
+              textTheme: const TextTheme().copyWith(
                 titleLarge: TextStyle(
                   color: kLightModeColorScheme.onSecondaryContainer,
                 ),
@@ -68,15 +68,15 @@ void main() {
                   fontSize: 16,
                 ),
               ),
-              bottomSheetTheme: BottomSheetThemeData().copyWith(
+              bottomSheetTheme: const BottomSheetThemeData().copyWith(
                 backgroundColor: kLightModeColorScheme.onSecondary,
               ),
-              iconTheme: IconThemeData().copyWith(
+              iconTheme:const  IconThemeData().copyWith(
                 color: kLightModeColorScheme.onPrimaryContainer,
               ),
             ),
             themeMode: ThemeMode.system,
-            home: HomePage(),
+            home:const  HomePage(),
           ),
     ),
   ); //255,188,170,164

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChartBars extends StatefulWidget {
-   ChartBars({super.key, required this.fill});
+   const ChartBars({super.key, required this.fill});
   final double fill;
 
   @override
@@ -21,7 +21,7 @@ final isDarkMode =MediaQuery.of(context).platformBrightness==Brightness.dark;
           child: DecoratedBox(
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.vertical(top: Radius.circular(8.0)),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(8.0)),
               color: isDarkMode
                             ? Theme.of(context).colorScheme.secondary
                             : Theme.of(context)

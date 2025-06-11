@@ -24,7 +24,7 @@ class ExpenseListItem extends StatelessWidget {
                 ),
                 const Spacer(),
                 Icon(CategoryIcons[storedExpProperties.category]),
-                SizedBox(width: 6),
+                const SizedBox(width: 6),
                 Text(
                   storedExpProperties.formattedDate().toString(),
                   style: Theme.of(context).textTheme.titleSmall,

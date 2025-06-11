@@ -42,8 +42,8 @@ class _HomePage extends State<HomePage> {
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text("Expense removed"),
-        duration: Duration(seconds: 3),
+        content: const Text("Expense removed"),
+        duration: const Duration(seconds: 3),
         action: SnackBarAction(
           label: "Undo",
           onPressed: () {
@@ -60,7 +60,7 @@ class _HomePage extends State<HomePage> {
   Widget build(context) {
     final width = MediaQuery.of(context).size.width;
 
-    Widget MainContent = Center(
+    Widget MainContent = const Center(
       child: Text("No items present here, please add some."),
     );
     if (_storedExpStructure.isNotEmpty) {
@@ -82,7 +82,7 @@ class _HomePage extends State<HomePage> {
               : Column(
                 children: [
                   ChartLayout(registeredExpenses: _storedExpStructure),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Expanded(child: MainContent),
                 ],
               ),
@@ -91,7 +91,7 @@ class _HomePage extends State<HomePage> {
         //backgroundColor: const Color.fromARGB(255, 188, 170, 164),
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.person_2_rounded),
+          icon: const Icon(Icons.person_2_rounded),
         ),
         title: Text(
           "EXPENSE TRACKER",
@@ -107,7 +107,7 @@ class _HomePage extends State<HomePage> {
                     (context) => InsideOverlay(listOfExpense: addExpenseInList),
               );
             },
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           ),
         ],
       ),

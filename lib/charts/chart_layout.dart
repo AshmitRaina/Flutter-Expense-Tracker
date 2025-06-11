@@ -3,7 +3,7 @@ import 'package:expense_tracker_revision/modal/expenses_structure.dart';
 import 'package:flutter/material.dart';
 
 class ChartLayout extends StatelessWidget {
-  ChartLayout({super.key, required this.registeredExpenses});
+  const ChartLayout({super.key, required this.registeredExpenses});
   final List<ExpensesStructure> registeredExpenses;
   List<chartStructure> get buckets {
     return [
@@ -73,9 +73,10 @@ class ChartLayout extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 12,),
+          const SizedBox(height: 12,),
           //Row to show the icons below the bars
           Row(
+            mainAxisSize: MainAxisSize.max,
             children:
                 buckets
                     .map(

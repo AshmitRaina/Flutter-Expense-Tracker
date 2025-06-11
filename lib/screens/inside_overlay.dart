@@ -57,7 +57,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: Text("Okay"),
+                  child: const Text("Okay"),
                 ),
               ],
             ),
@@ -122,7 +122,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                             decoration: InputDecoration(
                               counterStyle:
                                   isDarkMode
-                                      ? TextStyle(color: Colors.white)
+                                      ? const TextStyle(color: Colors.white)
                                       : Theme.of(context).textTheme.titleSmall,
                               label: Text(
                                 "Title",
@@ -157,7 +157,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                       decoration: InputDecoration(
                         counterStyle:
                             isDarkMode
-                                ? TextStyle(color: Colors.white)
+                                ? const TextStyle(color: Colors.white)
                                 : Theme.of(context).textTheme.titleSmall,
                         label: Text(
                           "Title",
@@ -199,7 +199,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                         ),
                         IconButton(
                           onPressed: _datepicker,
-                          icon: Icon(Icons.calendar_month_rounded),
+                          icon: const Icon(Icons.calendar_month_rounded),
                         ),
                       ],
                     )
@@ -228,7 +228,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                         ),
                         IconButton(
                           onPressed: _datepicker,
-                          icon: Icon(Icons.calendar_month_rounded),
+                          icon: const Icon(Icons.calendar_month_rounded),
                         ),
                       ],
                     ),
@@ -238,7 +238,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                         const Spacer(),
                         TextButton(
                           onPressed: () => Navigator.pop(context),
-                          child: Text("Cancel"),
+                          child: const Text("Cancel"),
                         ),
                         ElevatedButton(
                           onPressed: () {
@@ -248,7 +248,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                             print(_amountController.text);
                             print(_selectedDate);
                           },
-                          child: Text("Save Changes"),
+                          child: const Text("Save Changes"),
                         ),
                       ],
                     )
@@ -279,7 +279,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                         const Spacer(),
                         TextButton(
                           onPressed: () => Navigator.pop(context),
-                          child: Text("Cancel"),
+                          child: const Text("Cancel"),
                         ),
                         ElevatedButton(
                           onPressed: () {
@@ -289,7 +289,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                             print(_amountController.text);
                             print(_selectedDate);
                           },
-                          child: Text("Save Changes"),
+                          child: const Text("Save Changes"),
                         ),
                       ],
                     ),
