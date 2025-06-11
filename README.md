@@ -41,4 +41,28 @@ flutter pub get
 flutter run
 
 ```
+## Platform Support
+✅ Android
+
+✅ iOS
+
+⚠️ Web (experimental, not fully optimized)
+
+## TODOs
+
+ Category-wise breakdown of expenses
+
+ Filter by date range
+
+📃 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👤 Author
+Ashmit Raina
+
+📧 [ashmitraina82@gmail.com]
+
+🔗 [LinkedIn](www.linkedin.com/in/ashmit-raina-4250a628b)
+ | [GitHub](https://github.com/AshmitRaina)
+
 
