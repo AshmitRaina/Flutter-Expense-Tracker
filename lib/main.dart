@@ -35,7 +35,7 @@ void main() {
                   foregroundColor: kDarkModeColorScheme.onPrimary,
                 ),
               ),
-              cardTheme:const  CardThemeData().copyWith(
+              cardTheme: const CardThemeData().copyWith(
                 color: kDarkModeColorScheme.primary,
               ),
               bottomSheetTheme: const BottomSheetThemeData().copyWith(
@@ -71,12 +71,12 @@ void main() {
               bottomSheetTheme: const BottomSheetThemeData().copyWith(
                 backgroundColor: kLightModeColorScheme.onSecondary,
               ),
-              iconTheme:const  IconThemeData().copyWith(
+              iconTheme: const IconThemeData().copyWith(
                 color: kLightModeColorScheme.onPrimaryContainer,
               ),
             ),
             themeMode: ThemeMode.system,
-            home:const  HomePage(),
+            home: const HomePage(),
           ),
     ),
   ); //255,188,170,164

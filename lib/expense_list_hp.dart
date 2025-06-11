@@ -8,20 +8,20 @@ class ExpenseListhp extends StatelessWidget {
   final void Function(ExpensesStructure expenseIndex) onRemoveItem;
   @override
   Widget build(context) {
-    return  ListView.builder(
+    return ListView.builder(
       shrinkWrap: true,
-        itemCount: storedExpStructure.length,
-        itemBuilder:
-            (context, index) => Dismissible(
-              background: Container(
-                color: Theme.of(
-                  context,
-                ).colorScheme.error.withValues(alpha: 0.75),
-              ),
-              key: ValueKey(storedExpStructure[index]),
-              onDismissed: (direction) => onRemoveItem(storedExpStructure[index]),
-              child: ExpenseListItem(storedExpStructure[index]),
+      itemCount: storedExpStructure.length,
+      itemBuilder:
+          (context, index) => Dismissible(
+            background: Container(
+              color: Theme.of(
+                context,
+              ).colorScheme.error.withValues(alpha: 0.75),
             ),
-      );
+            key: ValueKey(storedExpStructure[index]),
+            onDismissed: (direction) => onRemoveItem(storedExpStructure[index]),
+            child: ExpenseListItem(storedExpStructure[index]),
+          ),
+    );
   }
 }

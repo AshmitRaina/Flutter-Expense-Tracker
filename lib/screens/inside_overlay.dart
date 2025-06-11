@@ -51,7 +51,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
                 "Please fill your expense details.",
                 style:
                     platform
-                        ? TextStyle(color:  Colors.brown.shade800)
+                        ? TextStyle(color: Colors.brown.shade800)
                         : Theme.of(context).textTheme.titleSmall,
               ),
               actions: [

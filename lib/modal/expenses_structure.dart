@@ -45,10 +45,10 @@ class chartStructure {
   final Category category;
   final List<ExpensesStructure> expenses;
 
-  double get totalSumofExpense{
-    double sum =0;
-    for(final expense in expenses){
-      sum+=expense.amount;
+  double get totalSumofExpense {
+    double sum = 0;
+    for (final expense in expenses) {
+      sum += expense.amount;
     }
     return sum;
   }
