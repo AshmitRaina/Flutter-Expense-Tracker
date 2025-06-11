@@ -1,4 +1,5 @@
 import 'package:expense_tracker_revision/modal/expenses_structure.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -32,36 +33,61 @@ class _InsideOverlayState extends State<InsideOverlay> {
   }
 
   void _showExceptionAndAddExpense() {
-    final platform =
+    final platform = Theme.of(context).platform == TargetPlatform.iOS;
+    final platformBrightness =
         MediaQuery.of(context).platformBrightness == Brightness.dark;
     final doubleAmt = double.tryParse(_amountController.text);
     if (_titleController.text.isEmpty ||
         doubleAmt == null ||
         doubleAmt <= 0 ||
         _selectedDate == null) {
-      showDialog(
-        context: context,
-        builder:
-            (context) => AlertDialog(
-              title: Text(
-                "INVALID INPUT",
-                style: TextStyle(color: Colors.brown.shade800),
-              ),
-              content: Text(
-                "Please fill your expense details.",
-                style:
-                    platform
-                        ? TextStyle(color: Colors.brown.shade800)
-                        : Theme.of(context).textTheme.titleSmall,
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text("Okay"),
+      platform
+          ? showCupertinoDialog(
+            context: context,
+            builder:
+                (ctx) => CupertinoAlertDialog(
+                  title: Text(
+                    "INVALID INPUT",
+                    style: TextStyle(color: Colors.brown.shade800),
+                  ),
+                  content: Text(
+                    "Please fill your expense details.",
+                    style:
+                        platformBrightness
+                            ? TextStyle(color: Colors.brown.shade800)
+                            : Theme.of(context).textTheme.titleSmall,
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      child: const Text("Okay"),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-      );
+          )
+          : showDialog(
+            context: context,
+            builder:
+                (context) => AlertDialog(
+                  title: Text(
+                    "INVALID INPUT",
+                    style: TextStyle(color: Colors.brown.shade800),
+                  ),
+                  content: Text(
+                    "Please fill your expense details.",
+                    style:
+                        platformBrightness
+                            ? TextStyle(color: Colors.brown.shade800)
+                            : Theme.of(context).textTheme.titleSmall,
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text("Okay"),
+                    ),
+                  ],
+                ),
+          );
       return;
     } else {
       addingNewExpenses();
