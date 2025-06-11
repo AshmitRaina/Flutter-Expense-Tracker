@@ -63,7 +63,7 @@ Ashmit Raina
 
 📧 [ashmitraina82@gmail.com]
 
-🔗 [LinkedIn](www.linkedin.com/in/ashmit-raina-4250a628b)
+🔗 [LinkedIn](https://www.linkedin.com/in/ashmit-raina-4250a628b)
  | [GitHub](https://github.com/AshmitRaina)
 
 
