@@ -104,7 +104,7 @@ class _InsideOverlayState extends State<InsideOverlay> {
             child: Padding(
               padding: EdgeInsets.fromLTRB(
                 10,
-                10,
+                26,
                 10,
                 placingWidgetsForKeyboard + 10,
               ),
