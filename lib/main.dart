@@ -16,6 +16,7 @@ void main() {
         ),
         textTheme: TextTheme().copyWith(
           titleLarge: TextStyle(color: kDarkModeColorScheme.onPrimary),
+          
           labelLarge: TextStyle(
             color: kDarkModeColorScheme.onPrimary,
             fontSize: 16,

@@ -32,6 +32,8 @@ class _InsideOverlayState extends State<InsideOverlay> {
   }
 
   void _showExceptionAndAddExpense() {
+    final platform =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     final doubleAmt = double.tryParse(_amountController.text);
     if (_titleController.text.isEmpty ||
         doubleAmt == null ||
@@ -46,8 +48,11 @@ class _InsideOverlayState extends State<InsideOverlay> {
                 style: TextStyle(color: Colors.brown.shade800),
               ),
               content: Text(
-                "Please fill all the details for your expense.",
-                style: Theme.of(context).textTheme.titleSmall,
+                "Please fill your expense details.",
+                style:
+                    platform
+                        ? TextStyle(color:  Colors.brown.shade800)
+                        : Theme.of(context).textTheme.titleSmall,
               ),
               actions: [
                 TextButton(
