@@ -17,10 +17,10 @@ A sleek and intuitive Expense Tracker app built using **Flutter**. This applicat
 
 <p float="left">
   <img src="lib/Assets/screenshots/dark theme expense tracker.png" width="200" />
-  
+  <img src="lib/Assets/screenshots/dark overlay.png" width="200" />
   <img src="lib/Assets/screenshots/light theme expense tracker.png" width="200" />
   <img src="lib/Assets/screenshots/light overlay.png" width="200" />
-  <img src="lib/Assets/screenshots/dark overlay.png" width="200" />
+  
 </p>
 
 
