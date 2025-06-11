@@ -37,12 +37,10 @@ class ChartLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final platform = Theme.of(context).platform == TargetPlatform.iOS;
     return Container(
       margin: const EdgeInsets.all(16),
-      padding: const EdgeInsets.symmetric(
-        vertical: 16,
-        horizontal: 8,
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
       width: double.infinity,
       height: 180,
       decoration: BoxDecoration(
@@ -50,7 +48,7 @@ class ChartLayout extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             Theme.of(context).colorScheme.primary.withOpacity(0.3),
-            Theme.of(context).colorScheme.primary.withOpacity(0.0)
+            Theme.of(context).colorScheme.primary.withOpacity(0.0),
           ],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
@@ -73,18 +71,18 @@ class ChartLayout extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 12,),
+          const SizedBox(height: 12),
           //Row to show the icons below the bars
           Row(
-            mainAxisSize: MainAxisSize.max,
             children:
                 buckets
                     .map(
-                      (bucket) => Container(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 33.0),
-                          child: Icon(CategoryIcons[bucket.category]),
-                        ),
+                      (bucket) => Padding(
+                        padding:
+                            platform
+                                ? const EdgeInsets.symmetric(horizontal: 30.7)
+                                : const EdgeInsets.symmetric(horizontal: 33.0),
+                        child: Icon(CategoryIcons[bucket.category]),
                       ),
                     )
                     .toList(),
