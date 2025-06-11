@@ -16,12 +16,13 @@ A sleek and intuitive Expense Tracker app built using **Flutter**. This applicat
 ## 📸 Screenshots
 
 <p float="left">
-  <img src="assets/screenshots/home_light.png" width="200" />
-  <img src="assets/screenshots/home_dark.png" width="200" />
-  <img src="assets/screenshots/chart.png" width="200" />
+  <img src="lib/Assets/screenshots/dark theme expense tracker.png" width="200" />
+  
+  <img src="lib/Assets/screenshots/light theme expense tracker.png" width="200" />
+  <img src="lib/Assets/screenshots/light overlay.png" width="200" />
+  <img src="lib/Assets/screenshots/dark overlay.png" width="200" />
 </p>
 
-> *(Replace with actual screenshots from your app in the `assets/screenshots` folder.)*
 
 ## 🛠️ Getting Started
 
@@ -62,7 +63,7 @@ Ashmit Raina
 
 📧 [ashmitraina82@gmail.com]
 
-🔗 [LinkedIn](www.linkedin.com/in/ashmit-raina-4250a628b)
+🔗 [LinkedIn](https://www.linkedin.com/in/ashmit-raina-4250a628b)
  | [GitHub](https://github.com/AshmitRaina)
 
 
